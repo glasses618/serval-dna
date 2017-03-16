@@ -683,7 +683,7 @@ static int restful_meshmb_activity_json_content_chunk(struct http_request *hr, s
 	      strbuf_puts(b, ",");
 	      strbuf_sprintf(b, "%d", iterator->ack_timestamp);
 	      strbuf_puts(b, ",");
-	      strbuf_sprintf(b, "%lu", iterator->msg_reader.record_end_offset);
+	      strbuf_sprintf(b, "%llu", iterator->msg_reader.record_end_offset);
 	      strbuf_puts(b, ",");
 	      strbuf_json_string(b, (const char *)iterator->msg_reader.record);
 	      strbuf_puts(b, "]");
